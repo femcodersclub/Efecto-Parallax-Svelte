@@ -23,9 +23,63 @@
 	border-left: 2px solid rgba(255, 255, 255, 0.2);
 	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 	border-right: 2px solid rgba(0, 0, 0, 0.2);
-	margin-top: 11rem;
+	margin-top: 23rem;
 	padding: 10px 20px;
 }
 
+.buttons-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  .bottom-btn,
+  .disable {
+	font-size: 1rem;
+	cursor: pointer;
+	margin: 0 10px;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 50px;
+	background-color: transparent;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	transition: color 0.4s, transform 0.4s;
+  }
+  
+  .bottom-btn::before,
+  .disable::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	background: linear-gradient(45deg, #e16b29,#3f3a8a, #e16b29, #3f3a8a);
+	transition: transform 0.4s;
+	border-radius: 50%;
+	z-index: 0;
+  }
+  
+  .bottom-btn::after,
+  .disable::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+  }
+  
+  .bottom-btn:hover::before,
+  .disable:hover::before {
+	transform: scale(0);
+  }
+  
+  .disable {
+	cursor: not-allowed;
+	color: white;
+  }
 
   

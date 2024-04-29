@@ -13,7 +13,6 @@
 </script>
 
 <BackgroundGradientAnimation onDestroy={handleDestroy} />
-<button class="disable" on:click={() => (disabled = !disabled)}>disable</button>
 
 <Parallax sections={3} bind:this={parallax} {disabled}>
   {#each femCodersClub as char, index (index)} 
@@ -64,68 +63,55 @@
     flex-direction: column;
   "
 >
-<h1 class="title">
-  Efecto Parallax con Svelte
-</h1>
+  <h1 class="title">
+    Efecto Parallax con Svelte
+  </h1>
+
+  <div class="buttons-container">
+  
     <button
       class="bottom-btn"
-      on:click={() =>
-        parallax.scrollTo(3, { selector: ".top-btn", duration: 4000 })}
+      on:click={() => parallax.scrollTo(3, { selector: ".top-btn", duration: 4000 })}
     >
       Click me!
     </button>
 
-    <img {src} alt="Image description" aria-hidden="true" style="" />
-  </ParallaxLayer>
-
-  <ParallaxLayer
-    offset="2"
-    rate="2"
-    style="
-		  background-color: pink; 
-			display: flex; 
-			justify-content: center; 
-			align-items: center;
-		"
-  >
     <button
-      class="top-btn"
-      on:click={() =>
-        parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
+      class="disable"
+      on:click={() => (disabled = !disabled)}
     >
-      Scroll to top
+      disable
     </button>
-  </ParallaxLayer>
+  </div>
+
+  <img {src} alt="Image description" aria-hidden="true" style="" />
+</ParallaxLayer>
+
+<ParallaxLayer
+  offset="2"
+  rate="2"
+  style="
+    background-color: pink; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  "
+>
+  <button
+  class="bottom-btn"
+    on:click={() =>
+      parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
+  >
+    Scroll to top
+  </button>
+</ParallaxLayer>
 </Parallax>
 
 <style>
-  :global(body) {
-    padding: 0;
-    background-color: white;
-    color: #313131;
-    font-family: monospace;
-  }
-
-
-  button {
-    font-size: 1rem;
-    cursor: pointer;
-  }
-
-  button:focus {
-    outline: 4px dashed #ff5c77;
-  }
-
-  .disable {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 10;
-  }
-
-  img {
-    margin-top: 50px;
-    width: 100%;
-    height: auto;
-  }
+img {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+}
 </style>
+
