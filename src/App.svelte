@@ -1,5 +1,9 @@
 <script>
   import { Parallax, ParallaxLayer } from "svelte-parallax";
+  import BackgroundGradientAnimation from './components/BackgroundGradientAnimation.svelte';
+  const handleDestroy = () => {
+	  console.log('Componente destruido');
+	}
 
   let parallax;
   let disabled = false;
@@ -7,6 +11,7 @@
   let src = "/femcoders.jpg";
 </script>
 
+<BackgroundGradientAnimation onDestroy={handleDestroy} />
 <button class="disable" on:click={() => (disabled = !disabled)}>disable</button>
 
 <Parallax sections={3} bind:this={parallax} {disabled}>
