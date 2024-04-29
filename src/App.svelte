@@ -1,13 +1,14 @@
 <script>
   import { Parallax, ParallaxLayer } from "svelte-parallax";
   import BackgroundGradientAnimation from './components/BackgroundGradientAnimation.svelte';
+
   const handleDestroy = () => {
-	  console.log('Componente destruido');
-	}
+    console.log('Componente destruido');
+  }
 
   let parallax;
   let disabled = false;
-  let fancy = "fancy".split("");
+  let femCodersClub = "femCoders Club".split(""); 
   let src = "/femcoders.jpg";
 </script>
 
@@ -15,17 +16,17 @@
 <button class="disable" on:click={() => (disabled = !disabled)}>disable</button>
 
 <Parallax sections={3} bind:this={parallax} {disabled}>
-  {#each fancy as char, index (index)}
+  {#each femCodersClub as char, index (index)} 
     <ParallaxLayer
-      rate={(index + 1) / (fancy.length - 1)}
-      offset={1}
-      style="
-		  background-color: transparent;
-			 margin-left: {38 + index * 5}%; 
-				display: flex; 
-				justify-content: flex-start; 
-				align-items: center;
-		  "
+    rate={(index + 1) / (femCodersClub.length - 1)}
+    offset={1}
+    style="
+      background-color: transparent;
+      margin-left: {18 + index * 5}%; 
+      font-size: 2rem; 
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+      color: white; 
+    "
     >
       <p class="femCoders Club">
         {char}
@@ -54,17 +55,18 @@
   </ParallaxLayer>
 
   <ParallaxLayer
-    rate="1"
-    style="
-		  background-color: transparent; 
-			display: flex; 
-			justify-content: center; 
-			align-items: center; 
-			flex-direction: column;
-		
-		"
-  >
-    <h1>Efecto Parallax con Svelte</h1>
+  rate="1"
+  style="
+    background-color: transparent; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+  "
+>
+<h1 class="title">
+  Efecto Parallax con Svelte
+</h1>
     <button
       class="bottom-btn"
       on:click={() =>
@@ -104,10 +106,6 @@
     font-family: monospace;
   }
 
-  h1 {
-    font-size: 2rem;
-    margin-top: 180px;
-  }
 
   button {
     font-size: 1rem;
