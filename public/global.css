@@ -1,85 +1,133 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
 }
+
 .background {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-  }
-  .title {
-	color: white;
-	font-size: 3rem;
-	text-shadow: 
-	  -1px -1px 0 rgba(0, 0, 0, 0.2),
-	   1px -1px 0 rgba(0, 0, 0, 0.2),
-	  -1px  1px 0 rgba(0, 0, 0, 0.2),
-	   1px  1px 0 rgba(0, 0, 0, 0.2);
-	border-top: 2px solid rgba(255, 255, 255, 0.2);
-	border-left: 2px solid rgba(255, 255, 255, 0.2);
-	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	border-right: 2px solid rgba(0, 0, 0, 0.2);
-	margin-top: 23rem;
-	padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2), 1px -1px 0 rgba(0, 0, 0, 0.2),
+    -1px 1px 0 rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  margin-top: 1rem;
 }
 
 .buttons-container {
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
-  }
-  
-  .bottom-btn,
-  .disable {
-	font-size: 1rem;
-	cursor: pointer;
-	margin: 0 10px;
-	padding: 12px 24px;
-	border: none;
-	border-radius: 50px;
-	background-color: transparent;
-	color: #fff;
-	position: relative;
-	overflow: hidden;
-	transition: color 0.4s, transform 0.4s;
-  }
-  
-  .bottom-btn::before,
-  .disable::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 200%;
-	height: 200%;
-	background: linear-gradient(45deg, #e16b29,#3f3a8a, #e16b29, #3f3a8a);
-	transition: transform 0.4s;
-	border-radius: 50%;
-	z-index: 0;
-  }
-  
-  .bottom-btn::after,
-  .disable::after {
-	content: attr(data-text);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1;
-  }
-  
-  .bottom-btn:hover::before,
-  .disable:hover::before {
-	transform: scale(0);
-  }
-  
-  .disable {
-	cursor: not-allowed;
-	color: white;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.bottom-btn,
+.disable {
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s, transform 0.4s;
+  margin-top: 20px;
+}
+
+.bottom-btn::before,
+.disable::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
+  transition: transform 0.4s;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.bottom-btn::after,
+.disable::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.bottom-btn:hover::before,
+.disable:hover::before {
+  transform: scale(0);
+}
+
+.disable {
+  cursor: not-allowed;
+  color: white;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.text-container {
+  flex: 1;
+  color: #fff;
+  font-size: 22px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.logo-container {
+  flex: 1;
+  text-align: right;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  width: 100%;
+  max-width: 25rem;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+h2 {
+  color: #e16b29;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+    -1px -1px 4px rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
   }
 
-  
+  .text-container,
+  .logo-container {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+}
