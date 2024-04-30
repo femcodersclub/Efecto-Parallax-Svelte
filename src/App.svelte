@@ -1,25 +1,25 @@
 <script>
   import { Parallax, ParallaxLayer } from "svelte-parallax";
-  import BackgroundGradientAnimation from "./components/BackgroundGradientAnimation.svelte";
+  import BackgroundGradientAnimation from './components/BackgroundGradientAnimation.svelte';
 
   const handleDestroy = () => {
-    console.log("Componente destruido");
-  };
+    console.log('Componente destruido');
+  }
 
   let parallax;
   let disabled = false;
-  let femCodersClub = "femCoders Club".split("");
+  let femCodersClub = "femCoders Club".split(""); 
   let src = "/prueba.png";
 </script>
 
 <BackgroundGradientAnimation onDestroy={handleDestroy} />
 
 <Parallax sections={3} bind:this={parallax} {disabled}>
-  {#each femCodersClub as char, index (index)}
+  {#each femCodersClub as char, index (index)} 
     <ParallaxLayer
-      rate={(index + 1) / (femCodersClub.length - 1)}
-      offset={1}
-      style="
+    rate={(index + 1) / (femCodersClub.length - 1)}
+    offset={1}
+    style="
       background-color: transparent;
       margin-left: {18 + index * 5}%; 
       font-size: 2rem; 
@@ -32,30 +32,24 @@
       </p>
     </ParallaxLayer>
   {/each}
+  <ParallaxLayer offset={1} rate={-2.5} class="glass-section-right">
+    <div class="glass-container-right">
+      <h2 class="eventos-title" style="margin-top: 3rem;">Eventos</h2>
 
-  <ParallaxLayer
-    offset={1}
-    rate={-2.5}
-    style="display: flex; justify-content: flex-end;"
-  >
-    <div
-      style="background-color: lightblue; opacity: 0.5; width: 50%; height: 100%;"
-    />
+    </div>
   </ParallaxLayer>
-
-  <ParallaxLayer
-    offset={1}
-    rate={2.5}
-    style="display: flex; justify-content: flex-start;"
-  >
-    <div
-      style="background-color: yellow; opacity: 0.5; width: 50%; height: 100%;"
-    />
+  
+  <ParallaxLayer offset={1} rate={2.5} class="glass-section-left">
+    <div class="glass-container-left">
+      <h2 class="pasados-title"  style="margin-top: 3rem;">Pasados</h2>
+      
+    </div>
   </ParallaxLayer>
+  
 
   <ParallaxLayer
-    rate="1"
-    style="
+  rate="1"
+  style="
     background-color: transparent; 
     display: flex; 
     justify-content: center; 
@@ -63,66 +57,70 @@
     flex-direction: column;
     
   "
-  >
-    <h1 class="title">Efecto Parallax con Svelte</h1>
+>
+  <h1 class="title">
+    Efecto Parallax con Svelte
+  </h1>
 
-    <div class="buttons-container">
-      <button
-        class="bottom-btn"
-        on:click={() =>
-          parallax.scrollTo(3, { selector: ".top-btn", duration: 4000 })}
-      >
-        Click me!
-      </button>
+  <div class="buttons-container">
+  
+    <button
+      class="bottom-btn"
+      on:click={() => parallax.scrollTo(3, { selector: ".top-btn", duration: 4000 })}
+    >
+      Click me!
+    </button>
 
-      <button class="disable" on:click={() => (disabled = !disabled)}>
-        disable
-      </button>
-    </div>
+    <button
+      class="disable"
+      on:click={() => (disabled = !disabled)}
+    >
+      disable
+    </button>
+  </div>
 
-    <div class="content-container">
-      <div class="text-container">
-        <h2>femCoders Club</h2>
-        <p class="text-left">
-          Un espacio donde las mujeres de todas las habilidades y trayectorias
-          se unen para aprender, crecer y prosperar en el mundo de la
-          tecnología.
-        </p>
-        <p class="text-left">
-          Nuestro objetivo es derribar barreras, fomentar la diversidad y
-          promover la igualdad de género en la industria.
-        </p>
-        <p class="text-left">
-          ¡Únete a nosotros mientras construimos un futuro más inclusivo e
-          innovador para todas! 😊
-        </p>
-      </div>
 
-      <div class="logo-container">
-        <img {src} alt="Logo" class="logo" />
-      </div>
-    </div>
-  </ParallaxLayer>
+<div class="content-container">
+  
+  <div class="text-container">
+    <h2>femCoders Club</h2>
+    <p class="text-left">Un espacio donde las mujeres de todas las habilidades y trayectorias se unen para aprender, crecer y prosperar en el mundo de la tecnología.</p>
+    <p class="text-left">Nuestro objetivo es derribar barreras, fomentar la diversidad y promover la igualdad de género en la industria.</p>
+    <p class="text-left">¡Únete a nosotros mientras construimos un futuro más inclusivo e innovador para todas! 😊</p>
+    
+  </div>
 
-  <ParallaxLayer
-    offset="2"
-    rate="2"
-    style="
+  <div class="logo-container">
+    <img {src} alt="Logo" class="logo" />
+  </div>
+</div>
+
+
+
+</ParallaxLayer>
+
+<ParallaxLayer
+  offset="2"
+  rate="2"
+  style="
     background-color: pink; 
     display: flex; 
     justify-content: center; 
     align-items: center;
   "
+>
+  <button
+    class="top-btn"
+    on:click={() =>
+      parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
   >
-    <button
-      class="top-btn"
-      on:click={() =>
-        parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
-    >
-      Scroll to top
-    </button>
-  </ParallaxLayer>
+    Scroll to top
+  </button>
+</ParallaxLayer>
 </Parallax>
 
 <style>
+
 </style>
+
+
