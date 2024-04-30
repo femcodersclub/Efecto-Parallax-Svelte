@@ -1,6 +1,8 @@
 <script>
   import { Parallax, ParallaxLayer } from "svelte-parallax";
   import BackgroundGradientAnimation from './components/BackgroundGradientAnimation.svelte';
+  import Card from './components/Card.svelte';
+  
 
   const handleDestroy = () => {
     console.log('Componente destruido');
@@ -35,14 +37,35 @@
   <ParallaxLayer offset={1} rate={-2.5} class="glass-section-right">
     <div class="glass-container-right">
       <h2 class="eventos-title" style="margin-top: 3rem;">Eventos</h2>
-
-    </div>
+      <Card 
+      imageUrl="/evento1.jpeg"
+      title="Más allá de la superficie"
+      description="En esta oportunidad, exploraremos estrategias esenciales para testear el backend y descubriremos los desafíos comunes en lo que respecta a la escalabilidad de los sistemas. "
+    />
+    <!-- Segunda Card -->
+    <Card 
+      imageUrl="/evento2.jpeg"
+      title="Actitud mental y gestión emocional para ser lider de tu vida"
+      description="👩‍💻Laure Jongejans Salinas nos ayudará a descubrir herramientas prácticas y consejos adaptados a cada realidad que nos ayudarán a alcanzar nuestras metas más ambiciosas!"
+    />
+  </div>
+  
   </ParallaxLayer>
   
   <ParallaxLayer offset={1} rate={2.5} class="glass-section-left">
     <div class="glass-container-left">
       <h2 class="pasados-title"  style="margin-top: 3rem;">Pasados</h2>
-      
+      <Card 
+      imageUrl="/evento3.jpeg"
+      title=" Customiza Tu Perfil de GitHub :cohete:"
+      description="👩‍💻En este taller online, Mari Carmen Chueco Oviedo te guiará paso a paso para personalizar tu perfil de GitHub y hacerlo resaltar con tu estilo y creatividad."
+    />
+    <!-- Cuarta Card -->
+    <Card 
+      imageUrl="/evento4.jpeg"
+      title="Celebrar a la mujer en tecnología en honor al Día Internacional de la Mujer! 💃🌐"
+      description="Nos sumergiremos en el fascinante mundo de la tecnología junto a cuatro mujeres increíbles que están marcando la diferencia en este campo! 🌟👩‍💻"
+    />
     </div>
   </ParallaxLayer>
   
