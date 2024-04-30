@@ -39,8 +39,9 @@
       <h2 class="eventos-title" style="margin-top: 3rem;">Eventos</h2>
       <Card 
       imageUrl="/evento1.jpeg"
-      title="Más allá de la superficie"
+      title="Más allá de la superficie🌈"
       description="En esta oportunidad, exploraremos estrategias esenciales para testear el backend y descubriremos los desafíos comunes en lo que respecta a la escalabilidad de los sistemas. "
+    
     />
     <!-- Segunda Card -->
     <Card 
@@ -57,7 +58,7 @@
       <h2 class="pasados-title"  style="margin-top: 3rem;">Pasados</h2>
       <Card 
       imageUrl="/evento3.jpeg"
-      title=" Customiza Tu Perfil de GitHub :cohete:"
+      title=" Customiza Tu Perfil de GitHub 🚀💻"
       description="👩‍💻En este taller online, Mari Carmen Chueco Oviedo te guiará paso a paso para personalizar tu perfil de GitHub y hacerlo resaltar con tu estilo y creatividad."
     />
     <!-- Cuarta Card -->
@@ -143,6 +144,7 @@
 </Parallax>
 
 <style>
+
 
 </style>
 

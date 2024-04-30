@@ -122,6 +122,7 @@ h2 {
 .glass-section-left {
 	display: flex;
 	justify-content: flex-end;
+  
   }
   
   .glass-section-right {
@@ -156,23 +157,10 @@ h2 {
   }
 
   
-  .card {
-    background-color: rgba(255, 255, 255, 0.332);
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    margin-bottom: 20px;
-  }
-
-
-
 @media screen and (max-width: 768px) {
   .content-container {
     flex-direction: column;
+  
   }
 
   .text-container,
