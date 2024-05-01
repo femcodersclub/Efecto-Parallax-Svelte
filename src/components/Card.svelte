@@ -32,7 +32,7 @@
     transform-style: preserve-3d;
     position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(63, 58, 138, 0.6);
   }
 
   .card:hover .card-content {
@@ -50,6 +50,7 @@
     align-items: center;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   }
 
   .card-front {
@@ -57,7 +58,7 @@
   }
 
   .card-back {
-    background-color: rgba(255, 220, 220, 0.5);
+    background-color: rgba(255, 220, 220, 0.9);
     backdrop-filter: blur(10px);
     transform: rotateY(180deg);
     display: flex;
@@ -68,6 +69,7 @@
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
   }
 
   p {

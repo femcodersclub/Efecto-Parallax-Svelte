@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Playfair Display", serif;
+ 
 }
 
 .background {
@@ -30,7 +31,7 @@
 
 .buttons-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 2rem;
 }
 
@@ -116,7 +117,7 @@ h2 {
   color: #e16b29;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
     -1px -1px 4px rgba(255, 255, 255, 0.5);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .glass-section-left {
@@ -156,7 +157,7 @@ h2 {
 	position: relative; 
   }
 
-  
+
 @media screen and (max-width: 768px) {
   .content-container {
     flex-direction: column;
