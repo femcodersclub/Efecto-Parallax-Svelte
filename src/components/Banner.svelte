@@ -1,73 +1,87 @@
-<!-- Banner.svelte -->
 <script>
-    // Importa las bibliotecas necesarias
-    import { createEventDispatcher } from 'svelte';
-  
-    // Define las propiedades del componente
-    export const type = "info";
-    export let dismissable = true;
-    export let title = "¡Únete a femCoders Club!";
-    export let subtitle = "Conéctate con mujeres apasionadas por la tecnología y participa en eventos, talleres y charlas inspiradoras.";
-    export let actionText = "¡Únete!";
-    export let actionHref = "https://femcodersclub.com/";
-  
-    // Crea un dispatcher de eventos
-    const dispatch = createEventDispatcher();
-  
-    // Función para manejar el evento de cierre del banner
-    function handleClose() {
-      dispatch('close');
-    }
-  </script>
-  
-  <div class="banner" class:dismissable={dismissable}>
-    <!-- Contenido del banner -->
-    <div class="banner-content">
+  import { createEventDispatcher } from 'svelte';
+
+  export const type = "info";
+  export let dismissable = true;
+  export let title = "¡Únete a femCoders Club!";
+  export let subtitle = "Conéctate con mujeres apasionadas por la tecnología y participa en eventos, talleres y charlas inspiradoras.";
+  export let actionText = "¡Únete!";
+  export let actionHref = "https://communityinviter.com/apps/femcodersclub/femcoders-club";
+
+  const dispatch = createEventDispatcher();
+
+  function handleClose() {
+    dispatch('close');
+  }
+</script>
+
+<div class="banner" class:dismissable={dismissable}>
+  <div class="banner-content">
+    <div>
       <h2>{title}</h2>
-      <p>{subtitle}</p>
+      <h3>{subtitle}</h3>
+    </div>
+    <div>
       <a href={actionHref} class="banner-button">{actionText}</a>
     </div>
-  
-    <!-- Botón para cerrar el banner si es dismissable -->
-    {#if dismissable}
-      <button class="close-button" on:click={handleClose}>Cerrar</button>
-    {/if}
   </div>
-  
-  <style>
-    /* Estilos del banner */
-    .banner {
-      background-color: #007bff;
-      color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+</div>
+
+<style>
+  .banner {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    overflow: hidden; 
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    animation: slideLeft 15s linear infinite; 
+  }
+
+  h2, h3 {
+    color: white;
+    margin: 20px; 
+    text-align: center;
+  }
+
+  .banner-button {
+    background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; 
+  }
+
+  .banner-button:hover {
+    background-color: #0056b3;
+  }
+
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(-100%);
     }
-  
-    .banner-content {
-      flex: 1;
+    100% {
+      transform: translateX(100%);
     }
-  
-    .banner-button {
-      background-color: white;
-      color: #007bff;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-  
-    .close-button {
-      background-color: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-  </style>
-  
-  
-  
-  
+  }
+</style>
+
+
+
+
+
+
+
+

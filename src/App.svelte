@@ -1,31 +1,27 @@
 <script>
-  // Importaciones necesarias
   import { Parallax, ParallaxLayer } from "svelte-parallax";
-  import BackgroundGradientAnimation from "./components/BackgroundGradientAnimation.svelte";
-  import Card from "./components/Card.svelte";
-  import Banner from "./components/Banner.svelte";
+  import BackgroundGradientAnimation from "./components/backgroundGradientAnimation.svelte";
+  import Card from "./components/card.svelte";
+  import Banner from "./components/banner.svelte";
 
-  // Función de destrucción del componente
   const handleDestroy = () => {
     console.log("Componente destruido");
   };
 
-  // Variables de configuración
   let parallax;
   let disabled = false;
   let femCodersClub = "femCoders Club".split("");
   let src = "/prueba.png";
 </script>
 
-<!-- Animación de fondo -->
 <BackgroundGradientAnimation onDestroy={handleDestroy} />
-
-<!-- Paralaje principal -->
 <Parallax sections={3} bind:this={parallax} {disabled}>
-
-  <!-- Video de fondo -->
   <ParallaxLayer offset={1} rate={0} style="width: 100%; height: 100%;">
-    <video autoplay loop muted style="
+    <video
+      autoplay
+      loop
+      muted
+      style="
       position: absolute;
       top: 0;
       left: 0;
@@ -33,12 +29,12 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
-    ">
-      <source src="/video.mp4" type="video/mp4">
+    "
+    >
+      <source src="/video.mp4" type="video/mp4" />
     </video>
   </ParallaxLayer>
 
-  <!-- Capa de texto -->
   <ParallaxLayer offset={0} rate={0} style="width: 100%; height: 100%;">
     {#each femCodersClub as char, index (index)}
       <ParallaxLayer
@@ -59,8 +55,12 @@
     {/each}
   </ParallaxLayer>
 
-  <!-- Capas de eventos -->
-  <ParallaxLayer offset={1} rate={2.5} class="glass-section-right" style="width: 100%; height: 100%;">
+  <ParallaxLayer
+    offset={1}
+    rate={2.5}
+    class="glass-section-right"
+    style="width: 100%; height: 100%;"
+  >
     <div class="glass-container-right">
       <h2 class="eventos-title" style="margin-top: 3rem;">Eventos</h2>
       <Card
@@ -77,7 +77,12 @@
     </div>
   </ParallaxLayer>
 
-  <ParallaxLayer offset={1} rate={-2.5} class="glass-section-left" style="width: 100%; height: 100%;">
+  <ParallaxLayer
+    offset={1}
+    rate={-2.5}
+    class="glass-section-left"
+    style="width: 100%; height: 100%;"
+  >
     <div class="glass-container-left">
       <h2 class="pasados-title" style="margin-top: 3rem;">Pasados</h2>
       <Card
@@ -94,7 +99,6 @@
     </div>
   </ParallaxLayer>
 
-  <!-- Capa de contenido principal -->
   <ParallaxLayer
     rate="0.2"
     style="
@@ -146,47 +150,41 @@
     </div>
   </ParallaxLayer>
 
-  <!-- Capa de banner y botón de scroll -->
   <ParallaxLayer
     offset="2"
     rate="1"
     style="
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-      background-color: #3f3a8a;
-    "
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+  "
   >
     <Banner />
 
     <button
       class="top-btn"
       style="  
-        padding: 10px 20px; 
-        border: none; 
-        border-radius: 50%; 
-        background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
-        color: white; 
-        font-size: 1rem; 
-        cursor: pointer; 
-        transition: 0.3s;
-        position: fixed;
-        bottom: 60px; 
-        right: 20px;
-      "
+      padding: 10px 20px; 
+      border: none; 
+      border-radius: 50%; 
+      background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
+      color: white; 
+      font-size: 1rem; 
+      cursor: pointer; 
+      transition: 0.3s;
+      position: fixed;
+      bottom: 60px; 
+      right: 20px;
+    "
       on:click={() =>
         parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
     >
       Ir arriba
     </button>
   </ParallaxLayer>
-
 </Parallax>
 
-<!-- Estilos CSS -->
 <style>
   /* Estilos CSS para las diferentes secciones */
 </style>
-
-
-
