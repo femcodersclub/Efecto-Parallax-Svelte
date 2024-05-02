@@ -3,7 +3,7 @@
   import BackgroundGradientAnimation from "./components/BackgroundGradientAnimation.svelte";
   import Card from "./components/card.svelte";
   import Banner from "./components/Banner.svelte";
-  import Footer from "./components/footer.svelte";
+  import Footer from "./components/Footer.svelte";
 
   const handleDestroy = () => {
     console.log("Componente destruido");
