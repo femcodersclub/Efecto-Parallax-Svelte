@@ -17,6 +17,7 @@
 
 <BackgroundGradientAnimation onDestroy={handleDestroy} />
 <Parallax sections={3} bind:this={parallax} {disabled}>
+  
   <ParallaxLayer offset={1} rate={0} style="width: 100%; height: 100%;">
     <video
       autoplay
@@ -32,26 +33,30 @@
       z-index: -1;
     "
     >
-      <source src="/video.mp4" type="video/mp4" />
+      <source src="/femvideo.mp4" type="video/mp4" />
     </video>
   </ParallaxLayer>
 
   <ParallaxLayer offset={0} rate={0} style="width: 100%; height: 100%;">
+    
     {#each femCodersClub as char, index (index)}
       <ParallaxLayer
         rate={(index + 1) / (femCodersClub.length - 1) / 2}
         offset={1}
         style="
           width: 50%;
+          height: 100%;
           margin-left: {18 + index * 5}%; 
           font-size: 2rem; 
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
           color: white; 
         "
       >
-        <h2 class="femCoders Club">
+      
+        <h3 class="femCoders Club">
           {char}
-        </h2>
+        </h3>
+        
       </ParallaxLayer>
     {/each}
   </ParallaxLayer>
@@ -161,6 +166,22 @@
   "
   >
     <Banner />
+    <video
+      autoplay
+      loop
+      muted
+      style="
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      
+      object-fit:cover;
+      z-index: -1;
+    "
+    >
+      <source src="/cofundadoras.mp4" type="video/mp4" />
+    </video>
 
     <button
       class="top-btn"
@@ -174,7 +195,7 @@
       cursor: pointer; 
       transition: 0.3s;
       position: fixed;
-      bottom: 12rem; 
+      bottom: 9rem; 
       right: 20px;
     "
       on:click={() =>

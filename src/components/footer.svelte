@@ -37,9 +37,10 @@
 <style>
   .footer {
     width: 100%;
+    height: 100px;
     background: linear-gradient(45deg, #e16b29, #3f3a8a, #e16b29, #3f3a8a);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    padding: 30px 0;
+    padding: 10px 0;
     position: absolute;
     bottom: 0;
     left: 0;
