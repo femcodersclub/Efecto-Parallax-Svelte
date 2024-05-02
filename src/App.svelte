@@ -2,7 +2,7 @@
   import { Parallax, ParallaxLayer } from "svelte-parallax";
   import BackgroundGradientAnimation from "./components/BackgroundGradientAnimation.svelte";
   import Card from "./components/card.svelte";
-  import Banner from "./components/banner.svelte";
+  import Banner from "./components/Banner.svelte";
   import Footer from "./components/footer.svelte";
 
   const handleDestroy = () => {
