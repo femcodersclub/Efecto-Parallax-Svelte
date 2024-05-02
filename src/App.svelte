@@ -188,5 +188,5 @@
 </Parallax>
 
 <style>
-  /* Estilos CSS para las diferentes secciones */
+  
 </style>
