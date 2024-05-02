@@ -65,7 +65,7 @@
     offset={1}
     rate={2.5}
     class="glass-section-right"
-    style="width: 100%; height: 100%;"
+    style="width: 100%; height: 100%; "
   >
     <div class="glass-container-right">
       <h2 class="eventos-title" style="margin-top: 3rem;">Eventos</h2>
@@ -87,7 +87,8 @@
     offset={1}
     rate={-2.5}
     class="glass-section-left"
-    style="width: 100%; height: 100%;"
+    style="width: 100%; height: 100%; "
+    
   >
     <div class="glass-container-left">
       <h2 class="pasados-title" style="margin-top: 3rem;">Pasados</h2>
@@ -175,7 +176,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      
       object-fit:cover;
       z-index: -1;
     "

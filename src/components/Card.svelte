@@ -20,13 +20,13 @@
   .card {
     perspective: 1000px;
     width: 100%;
-    height: 300px;
+    height: 400px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .card-content {
-    width: 100%;
+    width: 90%;
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
@@ -34,7 +34,6 @@
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(63, 58, 138, 0.6);
   }
-
   .card:hover .card-content {
     transform: rotateY(180deg);
   }

@@ -141,6 +141,8 @@ h2 {
 	justify-content: flex-start;
 	align-items: flex-end;
 	padding: 20px;
+  position: relative;
+  
   }
   .glass-container-left {
 	width: 50%;
@@ -157,16 +159,20 @@ h2 {
   }
 
 
-@media screen and (max-width: 768px) {
-  .content-container {
-    flex-direction: column;
+  @media screen and (max-width: 768px) {
+    .content-container {
+      flex-direction: column; 
+      padding: 0 20px; 
+    }
   
+    .text-container,
+    .logo-container {
+      flex: 1; 
+      padding: 20px 0; 
+    }
+  
+    .logo {
+      max-width: 100%; 
+      height: auto;
+    }
   }
-
-  .text-container,
-  .logo-container {
-    flex: none;
-    width: 100%;
-    text-align: center;
-  }
-}
