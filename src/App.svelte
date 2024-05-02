@@ -3,6 +3,7 @@
   import BackgroundGradientAnimation from "./components/backgroundGradientAnimation.svelte";
   import Card from "./components/card.svelte";
   import Banner from "./components/banner.svelte";
+  import Footer from "./components/footer.svelte";
 
   const handleDestroy = () => {
     console.log("Componente destruido");
@@ -174,14 +175,16 @@
       cursor: pointer; 
       transition: 0.3s;
       position: fixed;
-      bottom: 60px; 
+      bottom: 12rem; 
       right: 20px;
     "
       on:click={() =>
         parallax.scrollTo(1, { selector: ".bottom-btn", duration: 1000 })}
     >
-      Ir arriba
+      Ir arriba👆
     </button>
+
+    <Footer />
   </ParallaxLayer>
 </Parallax>
 

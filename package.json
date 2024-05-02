@@ -23,6 +23,7 @@
   "dependencies": {
     "sirv-cli": "^2.0.0",
     "svelte-parallax": "^0.6.0",
-    "svelte-typewriter": "^3.2.3"
+    "svelte-typewriter": "^3.2.3",
+    "sveltestrap": "^5.11.3"
   }
 }
