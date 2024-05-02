@@ -32,8 +32,7 @@
 .buttons-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 2rem;
-}
+ }
 
 .bottom-btn,
 .disable {
@@ -47,7 +46,7 @@
   position: relative;
   overflow: hidden;
   transition: color 0.4s, transform 0.4s;
-  margin-top: 20px;
+  margin: 2rem;
 }
 
 .bottom-btn::before,

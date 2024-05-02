@@ -1,6 +1,6 @@
 <script>
   import { Parallax, ParallaxLayer } from "svelte-parallax";
-  import BackgroundGradientAnimation from "./components/backgroundGradientAnimation.svelte";
+  import BackgroundGradientAnimation from "./components/BackgroundGradientAnimation.svelte";
   import Card from "./components/card.svelte";
   import Banner from "./components/banner.svelte";
   import Footer from "./components/footer.svelte";
@@ -107,8 +107,7 @@
       justify-content: center; 
       align-items: center; 
       flex-direction: column;
-     
-      
+       
     "
   >
     <h1 class="title">Efecto Parallax con Svelte</h1>
