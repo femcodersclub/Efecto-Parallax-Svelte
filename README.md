@@ -1,14 +1,14 @@
-# Efecto Parallax con Svelte
+# 🎨 Efecto Parallax con Svelte
 
-![Efecto Parallax con Svelte](/public/gif.gif)
+![Descripción del gif](./public/gif.gif)
 
 Este es un pequeño proyecto que demuestra cómo crear un efecto Parallax utilizando el framework Svelte. El Parallax es una técnica de diseño web que crea la ilusión de profundidad al mover diferentes elementos a diferentes velocidades mientras el usuario se desplaza por la página.
 
-## ¿Por qué Svelte?
+## ¿Por qué Svelte?💡
 
 Svelte es un framework de desarrollo web moderno y potente que se diferencia de otros frameworks como React o Vue en su enfoque de compilación. En lugar de ejecutar el código en el navegador, Svelte realiza la mayor parte del trabajo durante el tiempo de compilación, lo que resulta en un código más eficiente y optimizado.
 
-### Ventajas de Svelte
+### Ventajas de Svelte 🙇  
 
 - **Simplicidad:** Svelte simplifica el desarrollo web al eliminar la necesidad de aprender y utilizar conceptos como Virtual DOM o directivas complejas. El código en Svelte es más limpio y fácil de entender.
 
@@ -16,7 +16,7 @@ Svelte es un framework de desarrollo web moderno y potente que se diferencia de 
 
 - **Interactividad:** Svelte facilita la creación de interfaces de usuario interactivas y dinámicas con menos código y menos complejidad.
 
-## Funcionalidades destacadas
+## Funcionalidades destacadas 🌟
 
 - **Efecto Parallax:** Este proyecto muestra cómo implementar un efecto Parallax de manera sencilla utilizando Svelte y sus capacidades de animación.
 
@@ -38,4 +38,5 @@ También puedes hacer un fork de este proyecto y ver cómo funciona el efecto Pa
 
 Además, para implementar el efecto Parallax en tu proyecto, puedes utilizar la librería svelte-parallax, que proporciona componentes predefinidos para crear efectos de Parallax de manera sencilla.
 
-### ¡Espero que disfrutes explorando y creando con Svelte!
+### ¡Espero que disfrutes explorando y creando con Svelte! 🚀
+
